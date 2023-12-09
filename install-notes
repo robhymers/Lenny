@@ -1,0 +1,58 @@
+-For DVD support
+
+Install libdvdnav4, libdvdread4, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-ugly, and libdvd-pkg.
+
+Run the command
+
+sudo dpkg-reconfigure libdvd-pkg
+
+---
+
+List of apps to install - zsh vim mc grsync vlc krusader thunderbird libreoffice-fresh xsane qbittorrent kolour-paint gimp
+
+- SSH Keys
+
+ssh-keygen -t ed25519
+then
+ssh-copy-id rob@server-ip
+
+---
+
+- Numlock on during boot
+
+Add Numlock=on to /etc/sddm.conf
+
+---
+
+-Install youtube-dl
+
+sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+$ sudo chmod a+rx /usr/local/bin/youtube-dl
+
+youtube-dl --help 
+youtube-dl file-link
+
+---
+
+Install oxygen
+Install kdeplasma-addons
+
+---
+
+Install “plasma-widgets-addons” package
+
+---
+
+Install “kwin-decoration-oxygen”
+
+---
+
+-To fix wifi dropping
+
+in /etc/default/grub on the GRUB_CMDLINE_LINUX line add ipv6.disable=1 then run
+sudo update-grub
+(and reboot)
+
+---
+
+Luxybear27pooks2023
