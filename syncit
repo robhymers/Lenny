@@ -1,10 +1,12 @@
  .#!/bin/bash
 
-# Syncit is a script to backup files and directories to the server
-# using "rsync"
+# Syncit is a script to backup files and directories to the server using "rsync"
  
 clear
 echo "Preparing to upload to BORIS server..."
+
+echo "Apps"
+rsync -r -t -v --progress --delete -s /home/rob/Apps/ 192.168.1.61:/media/Storage/Lenny/Apps/
 
 echo "Syncing Bin"
 rsync -r -t -v --progress --delete  -s /home/rob/Bin/ 192.168.1.61:/media/Storage/Lenny/Bin/
