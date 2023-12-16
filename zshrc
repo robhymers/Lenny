@@ -22,7 +22,7 @@ alias matrix="cmatrix -ba -u 2 -C green"
 #=============================================================================#
 #                            Rob's Big Bag of Weird                           #
 #=============================================================================#
-#
+
 export PATH=$PATH:~/Bin
 export PATH=$PATH:~/Apps
 export EDITOR=nvim
