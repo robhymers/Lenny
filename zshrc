@@ -1,9 +1,25 @@
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt autocd beep extendedglob nomatch notify
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/rob/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
 #===============================================================#
 #                            ALIASES                            #
 #===============================================================#
 
 #pacman
 alias update="sudo pacman -Syyu"
+
+#remove orphans
+alias orphans="pacman -Qtdq | sudo pacman -Rns"
 
 #grub update
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
@@ -22,7 +38,7 @@ alias matrix="cmatrix -ba -u 2 -C green"
 #=============================================================================#
 #                            Rob's Big Bag of Weird                           #
 #=============================================================================#
-
+#
 export PATH=$PATH:~/Bin
 export PATH=$PATH:~/Apps
 export EDITOR=nvim
@@ -39,14 +55,4 @@ powerline-daemon -q
 #                    Lines configured by zsh-newuser-install                   #
 #==============================================================================#
 
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-setopt autocd beep extendedglob nomatch notify
-bindkey -e
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/rob/.zshrc'
 
-autoload -Uz compinit
-compinit
