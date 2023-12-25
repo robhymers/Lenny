@@ -42,7 +42,7 @@ echo "Syncing Stuff"
 rsync -r -t -v --progress --delete -s /home/rob/Stuff/ 192.168.1.61:/media/Storage/Lenny/Stuff/
 
 echo "Syncing Videos"
-rsync -r -t -v --progress -s /home/rob/Videos/ 192.168.1.61:/media/Storage/Lenny/Videos/
+rsync -r -t -v --progress --delete -s /home/rob/Videos/ 192.168.1.61:/media/Storage/Lenny/Videos/
 
 date >> /home/rob/Work/date.txt
 
