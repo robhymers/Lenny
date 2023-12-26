@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -11,10 +11,7 @@ zstyle :compinstall filename '/home/rob/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-=======
-# .zshrc file for Lenny.
 
->>>>>>> 17b285af2b30c17cbf6c76b0ac66d49c05cc0575
 
 #===============================================================#
 #                            ALIASES                            #

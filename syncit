@@ -44,7 +44,7 @@ rsync -r -t -v --progress --delete -s /home/rob/Stuff/ 192.168.1.61:/media/Stora
 echo "Syncing Videos"
 rsync -r -t -v --progress --delete -s /home/rob/Videos/ 192.168.1.61:/media/Storage/Lenny/Videos/
 
-date >> /home/rob/Work/date.txt
+date >> /home/rob/Work/sync.txt
 
 echo "---------------------------"
 echo "- All directories synced! -"
