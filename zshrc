@@ -1,7 +1,6 @@
-#======================================================================#
-#            Lines configured by zsh-newuser-install                   #
-#======================================================================#
-
+#==============================================================================#
+#                    Lines configured by zsh-newuser-install                   #
+#==============================================================================#
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -15,6 +14,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+#.zshrc file for Lenny.
 
 #===============================================================#
 #                            ALIASES                            #
@@ -40,7 +40,7 @@ alias lenny="ssh rob@192.168.1.59"
 alias matrix="cmatrix -ba -u 2 -C green"
 
 # local weather
-alias weather="wttr Brantford"
+alias weather="wttr brantford"
 
 
 #=============================================================================#
@@ -58,5 +58,6 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 powerline-daemon -q
 . /usr/share/powerline/bindings/zsh/powerline.zsh
+
 
 

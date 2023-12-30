@@ -1,39 +1,37 @@
  .#!/bin/bash
 
-# Syncit is a script to backup files and directories to the server using "rsync"
+# Syncit is a script to backup files and directories to the server
+# using "rsync"
  
 clear
 echo "Preparing to upload to BORIS server..."
 
-echo "Apps"
-rsync -r -t -v --progress --delete -s /home/rob/Apps/ 192.168.1.61:/media/Storage/Lenny/Apps/
-
 echo "Syncing Bin"
-rsync -r -t -v --progress --delete  -s /home/rob/Bin/ 192.168.1.61:/media/Storage/Lenny/Bin/
+rsync -r -t -v --progress --delete -s /home/rob/Bin/ 192.168.1.61:/media/Storage/Lenny/Bin/
 
 echo "Syncing Documents"
-rsync -r -t -v --progress --delete  -s /home/rob/Documents/ 192.168.1.61:/media/Storage/Lenny/Documents/
+rsync -r -t -v --progress --delete -s /home/rob/Documents/ 192.168.1.61:/media/Storage/Lenny/Documents/
 
 echo "Syncing Downloads"
-rsync -r -t -v --progress --delete  -s /home/rob/Downloads/ 192.168.1.61:/media/Storage/Lenny/Downloads/
+rsync -r -t -v --progress --ignore-existing --delete -s /home/rob/Downloads/ 192.168.1.61:/media/Storage/Lenny/Downloads/
 
 echo "Syncing Music" 
-rsync -r -t -v --progress --delete  -s /home/rob/Music/ 192.168.1.61:/media/Storage/Lenny/Music/
+rsync -r -t -v --progress --delete -s /home/rob/Music/ 192.168.1.61:/media/Storage/Lenny/Music/
 
 echo "Syncing Pictures" 
-rsync -r -t -v --progress --delete  -s /home/rob/Pictures/ 192.168.1.61:/media/Storage/Lenny/Pictures/
+rsync -r -t -v --progress --delete -s /home/rob/Pictures/ 192.168.1.61:/media/Storage/Lenny/Pictures/
 
 echo "Syncing Pictures To Server"
 rsync -r -t -v --progress  -s /home/rob/Pictures/ 192.168.1.61:/media/Storage/Pictures/
 
 echo "Syncing Recipes"
-rsync -r -t -v --progress --delete -s /home/rob/Recipes/ 192.168.1.61:/media/Storage/Lenny/Recipes/
+rsync -r -t -v --progress --delete  -s /home/rob/Recipes/ 192.168.1.61:/media/Storage/Lenny/Recipes/
 
 echo "Syncing Recipes To Server"
-rsync -r -t -v --progress --ignore-existing  -s /home/rob/Recipes/ 192.168.1.61:/media/Storage/Lenny/Recipes/
+rsync -r -t -v --progress  -s /home/rob/Recipes/ 192.168.1.61:/media/Storage/Recipes/
 
 echo "Syncing Recipes To Dropbox"
-rsync -r -t -v --progress --delete  -s /home/rob/Recipes /home/rob/Dropbox/
+rsync -r -t -v --progress --delete -s /home/rob/Recipes /home/rob/Dropbox/
 
 echo "Syncing Stuff To Dropbox"
 rsync -r -t -v --progress -s /home/rob/Stuff /home/rob/Dropbox/
@@ -44,10 +42,10 @@ rsync -r -t -v --progress --delete -s /home/rob/Stuff/ 192.168.1.61:/media/Stora
 echo "Syncing Videos"
 rsync -r -t -v --progress --delete -s /home/rob/Videos/ 192.168.1.61:/media/Storage/Lenny/Videos/
 
-date >> ~/Work/sync.txt
 
 echo "---------------------------"
 echo "- All directories synced! -"
 echo "---------------------------"
 
-# Rob Hymers 2023
+date >> ~/Work/sync.txt
+
