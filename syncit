@@ -1,8 +1,9 @@
- .#!/bin/bash
+
+#!/bin/sh
 
 # Syncit is a script to backup files and directories to the server
 # using "rsync"
- 
+
 clear
 echo "Preparing to upload to BORIS server..."
 
@@ -15,37 +16,37 @@ rsync -r -t -v --progress --delete -s /home/rob/Documents/ 192.168.1.61:/media/S
 echo "Syncing Downloads"
 rsync -r -t -v --progress --delete -s /home/rob/Downloads/ 192.168.1.61:/media/Storage/Lenny/Downloads/
 
-echo "Syncing Music" 
+echo "Syncing Music"
 rsync -r -t -v --progress --delete -s /home/rob/Music/ 192.168.1.61:/media/Storage/Lenny/Music/
 
-echo "Syncing Pictures" 
+echo "Syncing Pictures"
 rsync -r -t -v --progress --delete -s /home/rob/Pictures/ 192.168.1.61:/media/Storage/Lenny/Pictures/
 
 echo "Syncing Pictures To Server"
-rsync -r -t -v --progress  -s /home/rob/Pictures/ 192.168.1.61:/media/Storage/Pictures/
+rsync -r -t -v --progress /home/rob/Pictures/ 192.168.1.61:/media/Storage/Pictures/
 
-echo "Syncing Recipes"
-rsync -r -t -v --progress --delete  -s /home/rob/Recipes/ 192.168.1.61:/media/Storage/Lenny/Recipes/
+Echo "Syncing Recipes"
+rsync -r -t -v --progress /home/rob/Recipes/ 192.168.1.61:/media/Storage/Lenny/Recipes/
 
 echo "Syncing Recipes To Server"
-rsync -r -t -v --progress  -s /home/rob/Recipes/ 192.168.1.61:/media/Storage/Recipes/
+rsync -r -t -v --progress /home/rob/Recipes/ 192.168.1.61:/media/Storage/Recipes/
 
 echo "Syncing Recipes To Dropbox"
-rsync -r -t -v --progress --delete -s /home/rob/Recipes /home/rob/Dropbox/
+rsync -r -t -v --progress /home/rob/Recipes /home/rob/Dropbox/
 
 echo "Syncing Stuff To Dropbox"
 rsync -r -t -v --progress -s /home/rob/Stuff /home/rob/Dropbox/
 
 echo "Syncing Stuff"
-rsync -r -t -v --progress --delete -s /home/rob/Stuff/ 192.168.1.61:/media/Storage/Lenny/Stuff/
+rsync -r -t -v --progress --delete /home/rob/Stuff/ 192.168.1.61:/media/Storage/Lenny/Stuff/
 
 echo "Syncing Videos"
-rsync -r -t -v --progress --delete -s /home/rob/Videos/ 192.168.1.61:/media/Storage/Lenny/Videos/
+rsync -r -t -v --progress --delete /home/rob/Videos/ 192.168.1.61:/media/Storage/Lenny/Videos/
 
 
 echo "---------------------------"
 echo "- All directories synced! -"
 echo "---------------------------"
 
-date >> ~/Work/sync.txt
+date >> /home/rob/Work/sync.txt
 
