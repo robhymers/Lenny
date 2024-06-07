@@ -32,5 +32,7 @@ sudo chown -R rob:rob ./yay-git
 cd yay-git
 sudo pacman -S --needed base-devel
 makepkg -si
+sudo pacman -S xorg-xinit  gives startx
+
 
 Luxybear27pooks2023
