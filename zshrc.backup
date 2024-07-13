@@ -14,7 +14,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-#.zshrc file for Lenny.
+#.zshrc file for Lenny
 
 #===============================================================#
 #                            ALIASES                            #
@@ -22,6 +22,7 @@ compinit
 
 #pacman
 alias update="sudo pacman -Syyu"
+alias install="sudo pacman -S"
 
 #remove orphans
 alias orphans="pacman -Qtdq | sudo pacman -Rns"
