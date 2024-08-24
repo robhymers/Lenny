@@ -23,6 +23,7 @@ compinit
 #pacman
 alias update="sudo pacman -Syyu"
 alias install="sudo pacman -S"
+alias upd="sudo pacman -Syyu"
 
 #remove orphans
 alias orphans="pacman -Qtdq | sudo pacman -Rns"
@@ -31,7 +32,7 @@ alias orphans="pacman -Qtdq | sudo pacman -Rns"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 #get fastest mirrors in your neighborhood
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --verbose --sort rate -l 20 -c Canada -c "United States" --save /etc/pacman.d/mirrorlist"
 
 #ssh
 alias boris="ssh rob@192.168.1.61"
