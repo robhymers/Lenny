@@ -36,7 +36,6 @@ alias mirrors="sudo reflector --verbose --sort rate -l 20 -c Canada -c "United S
 
 #ssh
 alias boris="ssh rob@192.168.1.61"
-alias lenny="ssh rob@192.168.1.59"
 
 # run cmatrix
 alias matrix="cmatrix -ba -u 2 -C green"
