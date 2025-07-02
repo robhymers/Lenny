@@ -32,7 +32,7 @@ alias orphans="pacman -Qtdq | sudo pacman -Rns"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 #get fastest mirrors in your neighborhood
-alias mirrors="sudo reflector --verbose --sort rate -l 20 -c Canada -c "United States" --save /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --verbose --sort rate -l 20 -c "Canada" -c "United States" --save /etc/pacman.d/mirrorlist"
 
 #ssh
 alias boris="ssh rob@192.168.1.61"
