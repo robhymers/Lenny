@@ -38,10 +38,7 @@ alias mirrors="sudo reflector --verbose --sort rate -l 20 -c "Canada" -c "United
 alias boris="ssh rob@192.168.1.61"
 
 # run cmatrix
-alias matrix="cmatrix -ba -u 2 -C green"
-
-# local weather
-alias weather="wttr brantford"
+alias matrix="cmatrix -bas -u 4"
 
 
 #=============================================================================#
