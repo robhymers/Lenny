@@ -49,7 +49,8 @@ export PATH=$PATH:~/Bin
 export PATH=$PATH:~/Apps
 export EDITOR=nvim
 
-fastfetch -l arco
+#fastfetch -l arco
+fastfetch -l arch
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
