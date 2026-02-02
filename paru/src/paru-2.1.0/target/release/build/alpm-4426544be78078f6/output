@@ -1,0 +1,3 @@
+cargo::rustc-check-cfg=cfg(alpm15,alpm16)
+cargo::rustc-cfg=alpm15
+cargo::rustc-cfg=alpm16
