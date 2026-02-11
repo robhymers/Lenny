@@ -1,0 +1,45 @@
+#!/bin/bash
+
+
+# down-files is a script to download files and directories to the local machine from BORIS
+# using "rsync"
+
+clear
+echo "Preparing to download from BORIS server..."
+
+echo "Downloading Apps"
+rsync -av --progress -s boris:/media/Storage/Lenny/Apps /home/rob
+
+echo "Downloading Bin"
+rsync -av --progress -s boris:/media/Storage/Lenny/Bin /home/rob
+
+echo "Downloading Documents"
+rsync -av --progress -s boris:/media/Storage/Lenny/Documents /home/rob
+
+echo "Downloading Downloads"
+rsync -av --progress -s boris:/media/Storage/Lenny/Downloads /home/rob
+
+echo "Downloading"
+rsync -av --progress -s boris:/media/Storage/Lenny/Music /home/rob
+
+echo "Downloading Pictures"
+rsync -av --progress -s boris:/media/Storage/Lenny/Pictures /home/rob
+
+echo "Downloading Recipes"
+rsync -av --progress -s boris:/media/Storage/Lenny/Recipes /home/rob
+
+echo "Downloading Stuff"
+rsync -av --progress -s boris:/media/Storage/Lenny/Stuff /home/rob
+
+echo "Downloading Videos"
+rsync -av --progress -s boris:/media/Storage/Lenny/Videos /home/rob
+
+
+echo "---------------------------"
+echo "- All directories synced! -"
+echo "---------------------------"
+
+
+
+
+
