@@ -60,11 +60,6 @@
             "keyColor": "yellow"
         },
         {
-            "type": "bios",
-            "key": "│ ├",
-            "keyColor": "yellow"
-        },
-        {
             "type": "packages",
             "key": "│ ├󰏖",
             "keyColor": "yellow"
@@ -93,11 +88,6 @@
         {
             "type": "uptime",
             "key": "  Uptime ",
-            "keyColor": "magenta"
-        },
-        {
-            "type": "datetime",
-            "key": "  DateTime ",
             "keyColor": "magenta"
         },
         {
