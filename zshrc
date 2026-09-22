@@ -55,9 +55,7 @@ fastfetch
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-#powerline-daemon -q
-#. /usr/share/powerline/bindings/zsh/powerline.zsh
-
 eval "$(starship init zsh)"
 
-
+# EOF
+# Rob Hymers Sept 21 26
